@@ -1,0 +1,731 @@
+/* =========================================
+   CORE FITNESS CLUB
+   TRAINER DASHBOARD
+   ========================================= */
+
+.trainer-dashboard {
+  min-height: 100vh;
+  background: #f7f7f5;
+  color: #171717;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.trainer-navbar {
+  height: 72px;
+  padding: 0 50px;
+
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  border-bottom: 1px solid #222222;
+}
+
+.trainer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.trainer-logo span {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff5a36;
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.trainer-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trainer-nav-actions button {
+  padding: 9px 14px;
+
+  background: transparent;
+  color: #dddddd;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.trainer-nav-actions button:hover {
+  background: #242424;
+  color: #ffffff;
+}
+
+.trainer-nav-actions .trainer-logout {
+  background: #ff5a36;
+  color: #ffffff;
+
+  margin-left: 5px;
+}
+
+.trainer-nav-actions .trainer-logout:hover {
+  background: #e94a28;
+}
+
+/* =========================================
+   DASHBOARD HEADER
+   ========================================= */
+
+.trainer-dashboard-header {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  padding: 55px 30px 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-label {
+  color: #ff5a36;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+.trainer-dashboard-header h1 {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 36px;
+  line-height: 1.2;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 10px;
+}
+
+.trainer-dashboard-header > div > p:last-child {
+  color: #737373;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.trainer-dashboard-content {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  padding: 0 30px 70px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================================
+   DASHBOARD CARD
+   ========================================= */
+
+.dashboard-card {
+  background: #ffffff;
+
+  border: 1px solid #e7e7e4;
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.035);
+}
+
+.dashboard-section-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.dashboard-section-title h2 {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  color: #111111;
+}
+
+.dashboard-section-title > span {
+  background: #fff0ec;
+  color: #ff5a36;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================
+   CREATE POST
+   ========================================= */
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.post-form input,
+.post-form textarea,
+.post-form select {
+  width: 100%;
+
+  background: #fafaf9;
+
+  border: 1px solid #dededb;
+  border-radius: 11px;
+
+  padding: 13px 14px;
+
+  color: #171717;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.post-form input::placeholder,
+.post-form textarea::placeholder {
+  color: #999999;
+}
+
+.post-form input:focus,
+.post-form textarea:focus,
+.post-form select:focus {
+  border-color: #ff5a36;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(255, 90, 54, 0.09);
+}
+
+.post-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.post-form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.post-form-bottom select {
+  width: 200px;
+  cursor: pointer;
+}
+
+.post-form-bottom button {
+  background: #ff5a36;
+  color: #ffffff;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.post-form-bottom button:hover {
+  background: #e94a28;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   EMPTY STATE
+   ========================================= */
+
+.dashboard-empty {
+  padding: 45px 20px;
+
+  background: #fafaf9;
+
+  border: 1px dashed #dededb;
+  border-radius: 13px;
+
+  text-align: center;
+}
+
+.dashboard-empty > span {
+  display: block;
+
+  font-size: 30px;
+
+  margin-bottom: 12px;
+}
+
+.dashboard-empty h3 {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 17px;
+
+  margin-bottom: 6px;
+}
+
+.dashboard-empty p {
+  color: #858585;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   TRAINER POSTS
+   ========================================= */
+
+.trainer-post-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.trainer-post {
+  background: #ffffff;
+
+  border: 1px solid #e5e5e2;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition: 0.25s ease;
+}
+
+.trainer-post:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.trainer-post img {
+  width: 100%;
+  height: 190px;
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #eeeeec;
+}
+
+.trainer-post-content {
+  padding: 17px;
+}
+
+.trainer-post-content > span {
+  display: inline-block;
+
+  background: #fff0ec;
+  color: #ff5a36;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  margin-bottom: 10px;
+}
+
+.trainer-post-content p {
+  color: #444444;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================================
+   SESSION LIST
+   ========================================= */
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.session-card {
+  background: #fafaf9;
+
+  border: 1px solid #e5e5e2;
+  border-radius: 14px;
+
+  padding: 20px;
+
+  transition: 0.2s ease;
+}
+
+.session-card:hover {
+  border-color: #d5d5d2;
+  background: #ffffff;
+}
+
+/* =========================================
+   SESSION USER
+   ========================================= */
+
+.session-user {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.session-avatar {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+.session-user h3 {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  margin-bottom: 3px;
+}
+
+.session-user p {
+  color: #777777;
+
+  font-size: 11px;
+
+  margin-top: 2px;
+}
+
+/* =========================================
+   SESSION DETAILS
+   ========================================= */
+
+.session-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+}
+
+.session-details > div {
+  background: #ffffff;
+
+  border: 1px solid #e8e8e5;
+  border-radius: 10px;
+
+  padding: 12px;
+}
+
+.session-details strong {
+  display: block;
+
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+.session-details span {
+  color: #171717;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================
+   SESSION MESSAGE
+   ========================================= */
+
+.session-message {
+  background: #ffffff;
+
+  border-left: 3px solid #ff5a36;
+
+  border-radius: 8px;
+
+  padding: 12px 14px;
+
+  margin-bottom: 15px;
+}
+
+.session-message strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: #555555;
+
+  margin-bottom: 5px;
+}
+
+.session-message p {
+  color: #666666;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   SESSION FOOTER
+   ========================================= */
+
+.session-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.status {
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.status.pending {
+  background: #fff5d9;
+  color: #a57600;
+}
+
+.status.accepted {
+  background: #e7f6ed;
+  color: #27804d;
+}
+
+.status.rejected {
+  background: #fceaea;
+  color: #c24747;
+}
+
+/* =========================================
+   SESSION ACTIONS
+   ========================================= */
+
+.session-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.accept-button,
+.reject-button {
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.accept-button {
+  background: #111111;
+  color: #ffffff;
+}
+
+.accept-button:hover {
+  background: #2b2b2b;
+}
+
+.reject-button {
+  background: #f7e9e9;
+  color: #c24747;
+}
+
+.reject-button:hover {
+  background: #f2dcdc;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .trainer-navbar {
+    padding: 0 25px;
+  }
+
+  .trainer-dashboard-header {
+    padding: 40px 25px 30px;
+  }
+
+  .trainer-dashboard-content {
+    padding: 0 25px 50px;
+  }
+
+  .trainer-post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+
+  .trainer-navbar {
+    height: auto;
+    min-height: 68px;
+
+    padding: 12px 15px;
+
+    gap: 10px;
+  }
+
+  .trainer-logo {
+    font-size: 15px;
+  }
+
+  .trainer-logo span {
+    width: 32px;
+    height: 32px;
+  }
+
+  .trainer-nav-actions {
+    gap: 2px;
+  }
+
+  .trainer-nav-actions button {
+    padding: 7px 8px;
+
+    font-size: 11px;
+  }
+
+  .trainer-nav-actions .trainer-logout {
+    margin-left: 2px;
+  }
+
+  .trainer-dashboard-header {
+    padding: 32px 18px 25px;
+  }
+
+  .trainer-dashboard-header h1 {
+    font-size: 27px;
+  }
+
+  .trainer-dashboard-content {
+    padding: 0 18px 45px;
+
+    gap: 18px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+
+    border-radius: 15px;
+  }
+
+  .dashboard-section-title h2 {
+    font-size: 18px;
+  }
+
+  .post-form-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .post-form-bottom select {
+    width: 100%;
+  }
+
+  .post-form-bottom button {
+    width: 100%;
+  }
+
+  .trainer-post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .session-details {
+    grid-template-columns: 1fr;
+  }
+
+  .session-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .session-actions {
+    width: 100%;
+  }
+
+  .accept-button,
+  .reject-button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,192 @@
+.signup-page {
+  min-height: 100vh;
+  background: #f5f7f6;
+  padding: 40px 20px;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* HEADER */
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-logo {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 12px;
+
+  border-radius: 15px;
+
+  background: #17211b;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.signup-header h1 {
+  font-size: 25px;
+}
+
+.signup-header p {
+  color: #68736c;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ROLE SELECTOR */
+
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.role-button {
+  padding: 15px;
+
+  border: 1px solid #dce2de;
+  border-radius: 10px;
+
+  background: #fafbfa;
+
+  color: #17211b;
+
+  font-weight: 600;
+}
+
+.role-button.active {
+  background: #17211b;
+  color: white;
+  border-color: #17211b;
+}
+
+/* FORM */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signup-form label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signup-form input,
+.signup-form textarea,
+.signup-form select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  margin-top: 6px;
+
+  border: 1px solid #dce2de;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fafbfa;
+}
+
+.signup-form input:focus,
+.signup-form textarea:focus,
+.signup-form select:focus {
+  border-color: #17211b;
+}
+
+.signup-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* TWO COLUMN FORM */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* BUTTON */
+
+.signup-submit {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 5px;
+
+  border-radius: 9px;
+
+  background: #17211b;
+
+  color: white;
+
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+.signup-submit:hover {
+  opacity: 0.9;
+}
+
+/* LOGIN */
+
+.login-link {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #68736c;
+
+  font-size: 14px;
+}
+
+.login-link button {
+  background: none;
+
+  color: #17211b;
+
+  font-weight: 700;
+
+  margin-left: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .signup-page {
+    padding: 20px 12px;
+  }
+
+  .signup-container {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+}
